@@ -4,7 +4,7 @@
 
 ***
 
-counts commit : 9
+counts commit : 10
 
 #### 基础命令
 
@@ -18,11 +18,30 @@ counts commit : 9
 
 例如，我在dev 分支下，更新了我的`readme.md`文件，此时我直接执行`git status`查看状态:
 
+```bash
+# git status
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   readme.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
 
 
 然后执行`git add .` 
 
+```bash
+# git status
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
 
+        modified:   readme.md
+```
+
+​			*注：此时，如果执行 `git reset HEAD` ,将会退回到没有`git add .` 之前的状态*
 
 再`git commit` 
 
