@@ -1,6 +1,6 @@
 ***
 
-**分支 branch**:
+**分支 branch**: （this is **dev** branch）
 
 比如我有个仓库在master主分支上面提交了 XXX1.0 版本，现在我想对其进行修改更新，但这需要一段时间，而我又需要即时push上去，以免本地出现问题，这时如果直接在master分支上做修改，将会让别人感到怪异，因为呈现的是个半成品。
 
@@ -111,6 +111,8 @@ git branch -f master HEAD~3  # 当前的HEAD向后3个节点， -f为强制移�
 Your identification has been saved in C:\Users\beidongjiedeguang/.ssh/id_rsa.
 Your public key has been saved in C:\Users\beidongjiedeguang/.ssh/id_rsa.pub.
 ```
+
+
 
 
 
