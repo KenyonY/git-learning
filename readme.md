@@ -4,7 +4,7 @@
 
 ***
 
-counts commit : 8
+counts commit : 9
 
 #### 基础命令
 
@@ -18,30 +18,26 @@ counts commit : 8
 
 例如，我在dev 分支下，更新了我的`readme.md`文件，此时我直接执行`git status`查看状态:
 
-![image-20200423000857650](picture/status.png)
+
 
 然后执行`git add .` 
 
-![image-20200423001500242](picture/status_add.png)
+
 
 再`git commit` 
 
-![image-20200423001648885](picture/status_commit.png)
 
 
 
 
-
-
+当然，`git add .` `git commit -m` 也可以用一句`git commit -am` 代替
 
 
 
 
 
 ```bash
-
 git log 	# 查看commit 记录
-
 ```
 
 
@@ -170,6 +166,11 @@ git branch -f master HEAD~3  # 当前的HEAD向后3个节点， -f为强制移�
   为了撤销更改并**分享**给别人，我们需要使用 `git revert`：
 
   
+  
+* git revert 和 git reset的区别
+  - git revert是用一次新的commit来回滚之前的commit，此次提交之前的commit都会被保留；
+  - git reset是回到某次提交，提交及之前的commit都会被保留，但是此commit id之后的修改都会被删除
+
 
 
 
