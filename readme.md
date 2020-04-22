@@ -4,7 +4,7 @@
 
 ***
 
-counts commit : 5
+counts commit : 6
 
 
 
@@ -93,7 +93,13 @@ git checkout master 	     # HEAD 移动到master节点上
 git branch -f master HEAD~3  # 当前的HEAD向后3个节点， -f为强制移动分支
 ```
 
+注：当使用git  branch -f 把master分支移动到某个节点后，又想移动回最新节点 ，可以使用：
 
+  1. `git pull` 快速切换至最新
+
+  2. `git log`查看最新节点的哈希值，然后 `git branch -f master xxx`
+
+     
 
  **撤销变更** 
 
