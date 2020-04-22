@@ -4,7 +4,7 @@
 
 ***
 
-counts commit : 10
+counts commit : 11
 
 #### 基础命令
 
@@ -45,13 +45,17 @@ Changes to be committed:
 
 再`git commit` 
 
+```bash
+# git status
+Your branch is ahead of 'origin/dev' by 1 commit.
+  (use "git push" to publish your local commits)
 
+nothing to commit, working tree clean
+```
 
+*注:`git add .` `git commit -m` 也可以用一句`git commit -am` 代替*
 
-
-当然，`git add .` `git commit -m` 也可以用一句`git commit -am` 代替
-
-
+到这里就已经被提交至本地仓库， git push 就可以提交到远程仓库了。
 
 
 
