@@ -4,11 +4,31 @@
 
 ***
 
-counts commit : 7
+counts commit : 8
+
+#### 基础命令
+
+`git status`	 :查看项目当前状态
+
+* 文件的提交需要经过`git add`、`git commit`及`git push`三个过程才能提交至git远程仓库。
+
+* 即`git add`提交至暂存区，再`git commit`提交至本地仓库，最后`git push`提交至远程仓库
+
+而`git status`便可以看到暂存区和本地仓库的文件变动以及提交状态
+
+例如，我在dev 分支下，更新了我的`readme.md`文件，此时我直接执行`git status`查看状态:
 
 
 
-分支 branch**: 
+```bash
+
+git log 	# 查看commit 记录
+
+```
+
+
+
+**分支 branch**: 
 
 比如我有个仓库在master主分支上面提交了 XXX1.0 版本，现在我想对其进行修改更新，但这需要一段时间，而我又需要即时push上去，以免本地出现问题，这时如果直接在master分支上做修改，将会让别人感到怪异，因为呈现的是个半成品。
 
@@ -113,7 +133,7 @@ git branch -f master HEAD~3  # 当前的HEAD向后3个节点， -f为强制移�
   git reset --hard ORIG_HEAD
   ```
 
-  
+  `git reset`中有三个命令（--hard、--soft与--mixed），主要用于工作区、暂存区、本地仓库三个区域的文件提交撤回。
 
 * 虽然在本地分支中使用 `git reset` 很方便，但是这种“改写历史”的方法对大家一起使用的远程分支是无效的哦！
 
