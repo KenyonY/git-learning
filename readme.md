@@ -212,5 +212,39 @@ Your public key has been saved in C:\Users\beidongjiedeguang/.ssh/id_rsa.pub.
 
 
 
+**win10 打开openssh server（不用内置ssh）**
+
+windows openssh下载：https://github.com/PowerShell/Win32-OpenSSH/releases
+
+解压后, 使用使用管理员权限下powershell 打开到路径，（如果没有anaconda的powershell也可以）：
+
+```bash
+# 安装
+powershell.exe -ExecutionPolicy Bypass -File install-sshd.ps1
+
+# 设置服务自启动
+sc config sshd start= auto
+
+# 使服务变为手动启动
+sc config sshd start= demand
+
+# 启动sshd服务
+net start sshd
+
+# 删除sshd服务
+sc delete sshd
+
+# 停止sshd服务
+sc stop sshd
+```
+
+配置防火墙：
+
+```bash
+netsh advfirewall firewall add rule name=sshd dir=in action=allow protocol=TCP localport=22
+```
+
+
+
 
 
