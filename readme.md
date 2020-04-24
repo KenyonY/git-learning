@@ -4,7 +4,7 @@
 
 ***
 
-counts commit : 14
+counts commit : 15
 
 #### 基础命令
 
@@ -122,7 +122,7 @@ git rebase dev		# 更新master
 
 当然它更重要的地方在于指向提交记录：
 
-我们可以通过指定提交记录哈希值的方式让HEAD在git中移动，而哈希值通过`git log` 来查看，虽然哈希值很长，比如可能是fed2da64c0efc5293610bdd892f82a58e8cbc5d8 此时一般输入`git checkout fed2`就可以定位到该记录节点处。
+我们可以通过指定提交记录哈希值(commit_ID)的方式让HEAD在git中移动，而哈希值通过`git log` 来查看，虽然哈希值很长，比如可能是fed2da64c0efc5293610bdd892f82a58e8cbc5d8 此时一般输入`git checkout fed2`就可以定位到该记录节点处。
 
 but, 通过哈希值指定提交记录多数情况都很不方便，所以 Git 引入了相对引用。
 
@@ -188,6 +188,16 @@ git branch -f master HEAD~3  # 当前的HEAD向后3个节点， -f为强制移�
 
   为了撤销更改并**分享**给别人，我们需要使用 `git revert`：
 
+  ```bash
+  git revert commit_ID
+  或者
+  git revert HEAD~n
+  ```
+  
+  可以**恢复至指定的节点的前一个节点**， 比如`git revert HEAD`便是恢复到HEAD的父节点。
+  
+  
+  
   
   
 * git revert 和 git reset的区别
