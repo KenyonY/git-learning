@@ -4,7 +4,7 @@
 
 ***
 
-counts commit : 15
+counts commit : 14
 
 #### 基础命令
 
